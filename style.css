@@ -411,6 +411,10 @@ MODAL
   font-weight: 700;
   text-align: center;
   padding: 28px;
+  z-index: -1;
+}
+.modal__overlay--visible {
+  z-index: 1;
 }
 
 .fa-spinner {
