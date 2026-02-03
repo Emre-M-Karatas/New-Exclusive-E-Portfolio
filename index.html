@@ -23,13 +23,13 @@
     </script>
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img id="personal-logo" src="./assets/logo.png" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -39,7 +39,7 @@
 
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -69,7 +69,8 @@
             I'm a <b class="gold"> Frontend Software Engineer </b> with a strong
             passion for building web applications with a great user experiences.
             <br />
-            Here's a bit more <b class="gold click" onclick="toggleModal()">about me.</b>
+            Here's a bit more
+            <b class="gold click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__list">
             <a href="" class="social__link click">
@@ -92,9 +93,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -153,7 +156,10 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
-          <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+          <i
+            class="fa-solid fa-xmark modal__exit click"
+            onclick="toggleModal()"
+          ></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h3 class="modal__sub-title modal__sub-title--contact">
             I'm always looking for new opportunities & would love to hear from
@@ -184,6 +190,15 @@
           </div>
         </div>
       </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0" />
+      <img src="./assets/circle.svg" class="shape shape--1" />
+      <img src="./assets/squiggly.svg" class="shape shape--2" />
+      <img src="./assets/circle.svg" class="shape shape--3" />
+      <img src="./assets/triangle.svg" class="shape shape--4" />
+      <img src="./assets/circle.svg" class="shape shape--5" />
+      <img src="./assets/squiggly.svg" class="shape shape--6" />
+      <img src="./assets/circle.svg" class="shape shape--7" />
+      <img src="./assets/semi circle.svg" class="shape shape--8" />
     </section>
     <section id="projects">
       <div class="container">
@@ -315,17 +330,18 @@
           </figure>
           <div class="footer__social--list">
             <a
-              href="https://github.com/Emre-M-Karatas"
+              href="https://github.com/Emre-M-Karatas" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >GitHub</a
             >
             <a
-              href="#"
+              href="https://www.linkedin.com/in/emre-karatas-2b84953aa/" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >LinkedIn</a
             >
             <a
               href="#"
+              onclick="toggleModal()"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Contact</a
             >
